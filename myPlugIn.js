@@ -19,7 +19,7 @@ if (autenticazione === true) {
     }else if ((richiestaNuovaRegistrazione === true) && (richiestaNuovaIscrizione === emailInserita)){
         document.getElementById("target").innerHTML= emailInserita + " è ora una email valida, a breve verrai reindirizzato - Grazie per esserti iscritto";
     }else{
-        document.getElementById("target").innerHTML= emailInserita + ", la prima mail che hai inserito è diversa da " + richiestaNuovaIscrizione + " prova a ricaricare la pagina";
+        document.getElementById("target").innerHTML= emailInserita + ", la prima mail che hai inserito, è diversa da " + richiestaNuovaIscrizione + " prova a ricaricare la pagina";
 
     }
 
