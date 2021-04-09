@@ -7,23 +7,25 @@ var autenticazione = emailValide.includes(emailInserita);
 
 if (autenticazione === true) {
     document.getElementById("target").innerHTML= emailInserita + " è una email valida, a breve verrai reindirizzato";
-}else{
-    var richiestaNuovaIscrizione = prompt (emailInserita + " non è una email valida, prova ad iscriverti al volo inserendo nuovamente la tua mail");
-    
-    emailValide.push(richiestaNuovaIscrizione);
+}else {
+        var richiestaNuovaIscrizione = prompt (emailInserita + " non è una email valida, prova ad iscriverti al volo inserendo nuovamente la tua mail");
 
-    var richiestaNuovaRegistrazione = emailValide.includes(richiestaNuovaIscrizione);
+         if (richiestaNuovaIscrizione === emailInserita){
 
-    if (autenticazione === true){
-        document.getElementById("target").innerHTML= emailInserita + "è una email valida, a breve verrai reindirizzato";
-    }else if ((richiestaNuovaRegistrazione === true) && (richiestaNuovaIscrizione === emailInserita)){
-        document.getElementById("target").innerHTML= emailInserita + " è ora una email valida, a breve verrai reindirizzato - Grazie per esserti iscritto";
-    }else{
-        document.getElementById("target").innerHTML= emailInserita + ", la prima mail che hai inserito, è diversa da " + richiestaNuovaIscrizione + " prova a ricaricare la pagina";
+            emailValide.push(richiestaNuovaIscrizione);
 
-    }
+            var nuovaRegistrazione = emailValide.includes(richiestaNuovaIscrizione);
 
-}
+                 if (nuovaRegistrazione === true){
+                    document.getElementById("target").innerHTML= emailInserita + " è ora una email valida, a breve verrai reindirizzato - Grazie per esserti iscritto";}
+                       
+         }else{      
+            document.getElementById("target").innerHTML= emailInserita + ", la prima mail che hai inserito, è diversa da " + richiestaNuovaIscrizione + " prova a ricaricare la pagina";}
+
+    }   
+
 console.log(emailInserita);
-console.log(richiestaNuovaIscrizione)
+console.log(richiestaNuovaIscrizione);
+console.log(nuovaRegistrazione);
 console.log(emailValide);
+    
