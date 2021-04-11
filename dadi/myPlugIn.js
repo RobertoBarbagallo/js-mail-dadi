@@ -57,12 +57,11 @@ if (Number.isNaN(numeroLanci)){
 
 if (quantitaVittorieUtente.length>quantitaVittorieAI.length){
 
-    document.getElementById("risultatofinale").innerHTML= ("Hai vinto!!" + quantitaVittorieUtente.length + " partite su " + numeroLanci);
-
+    document.getElementById("risultatofinale").innerHTML= ("Hai vinto " + quantitaVittorieUtente.length + " partite su " + numeroLanci + " !!!");
 }else if (quantitaVittorieUtente.length<quantitaVittorieAI.length){
-    document.getElementById("risultatofinale").innerHTML= ("Hai perso!!");
+    document.getElementById("risultatofinale").innerHTML= ("Hai perso!!!");
 }else{
-    document.getElementById("risultatofinale").innerHTM = ("Avete pareggiato");
+    document.getElementById("risultatofinale").innerHTM = ("Avete pareggiato!!!");
 }
 
 
