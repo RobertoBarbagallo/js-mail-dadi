@@ -32,13 +32,13 @@ if (Number.isNaN(numeroLanci)){
         console.log(lancioAI);
             if (lancioUtente>lancioAI){
 
-            document.getElementById("target").innerHTML+= "<span class='verde'>" + "vinci" + "</span>";
+            document.getElementById("target").innerHTML+= "<p class='verde'>" + "vinci" + "</p>";
              }else if (lancioUtente<lancioAI){
 
-            document.getElementById("target").innerHTML+= "<span class='rosso'>" + "perdi" + "</span>"; 
+            document.getElementById("target").innerHTML+= "<p class='rosso'>" + "perdi" + "</p>"; 
             
              }else{
-            document.getElementById("target").innerHTML+= "<span class='giallo'>" + "pareggio" + "</span>";
+            document.getElementById("target").innerHTML+= "<p class='giallo'>" + "pareggio" + "</p>";
              }
 
              var counter = "1";
