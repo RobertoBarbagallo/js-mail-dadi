@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-family: 'Gorditas', cursive;
+    font-size: 40px;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
+    background-image: url(sfondo.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+.target{
+    width: 100%;
+    height: auto;
+}
+
+.risultato{
+    background-color: rgba(250,3,16,0.3);
+    border-top-left-radius: 8px;  
+    border-top-right-radius: 8px; 
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+p{
+    border-bottom-left-radius: 8px;  
+    border-bottom-right-radius: 8px; 
+    font-family: 'Gorditas', cursive;
+    font-size: 28px;
+    background-color: rgba(250,3,16,0.2);
+}
+
+.verde{
+    color: green;
+}
+
+.rosso{
+    color: red;
+}
+
+.giallo{
+    color: gold;
+}
+
+.risultatofinalecontainer{
+    padding: 20px 0; 
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: lightgray;
+    text-align: center;
+    
+}
