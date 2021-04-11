@@ -13,7 +13,7 @@ var i = 0;
 
 
 if (Number.isNaN(numeroLanci)){
-    document.getElementById("target").innerHTML= ("Hai immesso un valore non numerico, riprova utilizzando le cifre della tasiera!");
+    document.getElementById("target").innerHTML = ("Hai immesso un valore non numerico, riprova utilizzando le cifre della tasiera!");
 }else{
   
     for (i=0; i <numeroLanci; i++) {
@@ -39,32 +39,29 @@ if (Number.isNaN(numeroLanci)){
             
              }else{
             document.getElementById("target").innerHTML+= "<p class='giallo'>" + "pareggio" + "</p>";
-             }
+             };
 
-             var counter = "1";
+            var counter = 1;
 
-             if (lancioUtente>lancioAI){
-                 quantitaVittorieUtente.push (counter);
-             }else if(lancioUtente<lancioAI){
-                 quantitaVittorieAI.push (counter);
-             }else{
-                quantitaVittorieUtente.push (counter);
-                quantitaVittorieAI.push (counter);
-             }
+            if (lancioUtente>lancioAI){
+                 quantitaVittorieUtente.push(counter);
+            }else if(lancioUtente<lancioAI){
+                 quantitaVittorieAI.push(counter);
+            }else{
+                quantitaVittorieUtente.push(counter);
+                quantitaVittorieAI.push(counter);
+            };
         
     };
 };
 
-if (quantitaVittorieUtente.length>quantitaVittorieAI.length){
-
-    document.getElementById("risultatofinale").innerHTML= ("Hai vinto " + quantitaVittorieUtente.length + " partite su " + numeroLanci + " !!!");
-}else if (quantitaVittorieUtente.length<quantitaVittorieAI.length){
-    document.getElementById("risultatofinale").innerHTML= ("Hai perso!!!");
+if (quantitaVittorieUtente.length > quantitaVittorieAI.length){
+        document.getElementById("risultatofinale").innerHTML = ("Hai vinto " + quantitaVittorieUtente.length + " partite su " + numeroLanci + " !!!");
+}else if(quantitaVittorieUtente.length < quantitaVittorieAI.length){
+        document.getElementById("risultatofinale").innerHTML = ("Hai perso!!!");
 }else{
-    document.getElementById("risultatofinale").innerHTM = ("Avete pareggiato!!!");
-}
-
-
+        document.getElementById("risultatofinale").innerHTM = ("ERROR");
+    };
 
 
 console.log (risultatiUtente);
