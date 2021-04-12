@@ -60,7 +60,7 @@ if (quantitaVittorieUtente.length > quantitaVittorieAI.length){
 }else if(quantitaVittorieUtente.length < quantitaVittorieAI.length){
         document.getElementById("risultatofinale").innerHTML = ("Hai perso!!!");
 }else{
-        document.getElementById("risultatofinale").innerHTM = ("ERROR");
+        document.getElementById("risultatofinale").innerHTML = ("Avete pareggiato!!!");
     };
 
 
