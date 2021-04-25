@@ -1,7 +1,8 @@
 var risultatiUtente = [];
 var risultatiAI = [];
-var quantitaVittorieUtente = [];
-var quantitaVittorieAI = [];
+var quantitaVittorieUtente = 0;
+var quantitaVittorieAI = 0;
+
 
 var lanci = prompt("Benvenuto nella simulazione di un lancio di dadi contro l'Intelligenza artificiale. Inserisci il numero di lanci da effettuare");
 
@@ -9,7 +10,6 @@ var numeroLanci = parseInt(lanci);
 
 console.log(numeroLanci);
 
-var i = 0;
 
 
 if (Number.isNaN(numeroLanci)) {
@@ -31,38 +31,28 @@ if (Number.isNaN(numeroLanci)) {
         console.log(lancioUtente);
         console.log(lancioAI);
         if (lancioUtente > lancioAI) {
-
             document.getElementById("target").innerHTML += "<p class='verde'>" + "vinci" + "</p>";
+            quantitaVittorieUtente += 1
         } else if (lancioUtente < lancioAI) {
-
             document.getElementById("target").innerHTML += "<p class='rosso'>" + "perdi" + "</p>";
+            quantitaVittorieAI += 1
 
         } else {
             document.getElementById("target").innerHTML += "<p class='giallo'>" + "pareggio" + "</p>";
         };
-
-        var counter = 1;
-
-        if (lancioUtente > lancioAI) {
-            quantitaVittorieUtente.push(counter);
-        } else if (lancioUtente < lancioAI) {
-            quantitaVittorieAI.push(counter);
-        } else {
-            quantitaVittorieUtente.push(counter);
-            quantitaVittorieAI.push(counter);
-        };
-
+       
     };
 };
 
-if (quantitaVittorieUtente.length > quantitaVittorieAI.length) {
-    document.getElementById("risultatofinale").innerHTML = ("Hai vinto " + quantitaVittorieUtente.length + " partite su " + numeroLanci + " !!!");
-} else if (quantitaVittorieUtente.length < quantitaVittorieAI.length) {
+if (quantitaVittorieUtente > quantitaVittorieAI) {
+    document.getElementById("risultatofinale").innerHTML = ("Hai vinto " + quantitaVittorieUtente + " partite su " + numeroLanci + " !!!");
+} else if (quantitaVittorieUtente < quantitaVittorieAI) {
     document.getElementById("risultatofinale").innerHTML = ("Hai perso!!!");
 } else {
     document.getElementById("risultatofinale").innerHTML = ("Avete pareggiato!!!");
 };
 
-
+console.log(quantitaVittorieUtente)
+console.log(quantitaVittorieAI)
 console.log(risultatiUtente);
 console.log(risultatiAI);
